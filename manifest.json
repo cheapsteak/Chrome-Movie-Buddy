@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+
+  "name": "Movie Buddy",
+  "description": "This extension adds movie ratings from Rotten Tomatoes to theatre showtime listings.",
+  "version": "0.2.3",
+  "content_scripts": [
+      {
+        "matches": [
+          "http://www.cineplex.com/Theatres/TheatreDetails/*",
+          "https://www.cineplex.com/Theatres/TheatreDetails/*"
+        ],
+        "js": [
+          "vendor/jquery-2.0.2.min.js",
+          "vendor/underscore-min.js",
+          "vendor/levenshtein.js",
+          "apikeys.js",
+          "moviebuddy.js"
+        ],
+        "css": [
+
+        ],
+        "run_at": "document_start"
+      }
+    ],
+  "permissions": [
+    "http://www.cineplex.com/*",
+    "https://www.cineplex.com/*",
+    "http://api.rottentomatoes.com/*",
+    "https://api.rottentomatoes.com/*"
+  ]
+}
+
