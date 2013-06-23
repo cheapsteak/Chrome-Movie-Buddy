@@ -21,7 +21,7 @@ var injectRatings = function(tomatoes){
         var title = $(el).text().replace(blacklistRegexp, '').trim();
         var tomato = findTomato(title, tomatoes);
         if (tomato) {
-            $(el).closest('.moviedetailsmaininfo').prepend('<div style="float:right">'+tomato.ratings.critics_score+' % </div>');
+            $(el).closest('.moviedetailsmaininfo').prepend(Handlebars.templates.ratings(tomato.ratings));
         }
     });
 }
@@ -35,5 +35,4 @@ $(function(){
         console.log(tomatoes);
         injectRatings(tomatoes);
     });
-    console.log($().jquery);
 });

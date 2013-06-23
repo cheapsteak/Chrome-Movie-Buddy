@@ -1,0 +1,35 @@
+.cineplex .mb-scores {
+    float: right;
+}
+
+.hide-text, .mb-icon {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.mb-scores {
+
+}
+    .mb-icon {
+        background-image: url('chrome-extension://__MSG_@@extension_id__/images/rt_small.png');
+        background-repeat: no-repeat;
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+    }
+        .Fresh { background-position: 0px -1px; }
+        .Rotten { background-position: 0px -19px; }
+        .Spilled { background-position: 0px -91px; }
+        .Upright { background-position: 0px -55px; }
+
+    .mb-audience {
+        margin-top: 6px;
+    }
+        .mb-score {
+            display:inline-block;
+            vertical-align:middle;
+            font-weight: bold;
+            margin-left: 3px;
+        }
+    

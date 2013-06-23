@@ -164,3 +164,5 @@ pip-log.txt
 
 *.zip
 apikeys.js
+imgsrc
+imgsrc/*
