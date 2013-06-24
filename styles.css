@@ -1,6 +1,4 @@
-.cineplex .mb-scores {
-    float: right;
-}
+
 
 .hide-text, .mb-icon {
     text-indent: 100%;
@@ -23,13 +21,79 @@
         .Spilled { background-position: 0px -91px; }
         .Upright { background-position: 0px -55px; }
 
-    .mb-audience {
-        margin-top: 6px;
-    }
         .mb-score {
             display:inline-block;
             vertical-align:middle;
             font-weight: bold;
             margin-left: 3px;
         }
-    
+        .mb-not-found {
+            font-weight: bold;
+        }
+
+/*Cineplex specific : Home page, top right list of top box-office movies*/
+.BoxOfficeMovie .mb-scores { 
+    margin-right: 4px;
+}
+/*Cineplex specific*/
+
+
+.mb--float-right {
+    float: right;
+}
+.mb--float-left {
+    float: left;
+}
+.mb--clear {
+    clear: both;
+}
+
+.cineplex .mb--poster-width {
+    width: 130px;
+}
+.cineplex .mb--text-center {
+    text-align: center;
+}
+
+.cineplex .mb--below-poster {
+    position: absolute;
+    top: 198px;
+}
+.cineplex .mb--overlay-poster {
+    position: absolute;
+    top: 180px;
+}
+.cineplex .MoviePoster .mb-scores {
+    margin-top: 4px;
+}
+
+.cineplex .FFEC-Display .mb-scores {
+    bottom: -15px;
+    left: 10px;
+}
+
+.mb--full-center, .mb--overlay {
+    width: 100%;
+    text-align: center;
+}
+
+.mb--overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .5);
+    bottom: 0px;
+}
+    .mb--overlay a .mb-score {
+        color: #fff;
+    }
+
+.mb--inline .mb-critics, .mb--overlay .mb-critics {
+    display: inline-block;
+}
+.mb--inline .mb-audience, .mb--overlay .mb-audience {
+    display: inline-block;
+    margin-left: 3px;
+}
+
+.mb--vertical .mb-audience {
+    margin-top: 6px;
+}

@@ -3,14 +3,14 @@
 
   "name": "Movie Buddy",
   "description": "Display movie ratings from Rotten Tomatoes to movie showtime listings.",
-  "version": "0.2.4",
+  "version": "0.2.7",
   "content_scripts": [
       {
         "matches": [
-          "http://*.cineplex.com/Theatres/TheatreDetails/*",
-          "http://*.cineplex.com/Theatres/TheatreDetails/*",
-          "http://cineplex.com/Theatres/TheatreDetails/*",
-          "https://cineplex.com/Theatres/TheatreDetails/*"
+          "http://*.cineplex.com/*",
+          "http://*.cineplex.com/*",
+          "http://cineplex.com/*",
+          "https://cineplex.com/*"
         ],
         "js": [
           "vendor/jquery-2.0.2.min.js",
