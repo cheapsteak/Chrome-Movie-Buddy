@@ -20,6 +20,7 @@
         .Rotten { background-position: 0px -19px; }
         .Spilled { background-position: 0px -91px; }
         .Upright { background-position: 0px -55px; }
+        .WantToSee { background-position: 0px -73px; }
 
         .mb-score {
             display:inline-block;
@@ -59,9 +60,12 @@
     position: absolute;
     top: 198px;
 }
+
+
 .cineplex .mb--overlay-poster {
     position: absolute;
-    top: 180px;
+    top: 160px;
+    width: 130px;
 }
 .cineplex .MoviePoster .mb-scores {
     margin-top: 4px;
@@ -77,12 +81,12 @@
     text-align: center;
 }
 
-.mb--overlay {
+.mb--overlay { 
     position: absolute;
     background-color: rgba(0, 0, 0, .5);
-    bottom: 0px;
+    z-index: 100;
 }
-    .mb--overlay a .mb-score {
+    .mb--overlay a .mb-score, .mb--overlay a, .mb--overlay a:visited .mb-score, .mb--overlay a:visited {
         color: #fff;
     }
 

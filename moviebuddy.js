@@ -24,9 +24,9 @@ var namespaceClasses = function (classes) {
 var prepareData = function (tomato, classes) {
     return {
         audience_score: tomato.ratings.audience_score,
-        critics_score: tomato.ratings.critics_score,
+        critics_score: tomato.ratings.critics_score !== -1 ? tomato.ratings.critics_score : null,
         critics_rating: tomato.ratings.critics_rating,
-        audience_rating: tomato.ratings.audience_rating,
+        audience_rating: tomato.ratings.audience_rating || "WantToSee",
         link: tomato.links.alternate,
         title: tomato.title,
         classes: namespaceClasses(classes)
@@ -67,9 +67,9 @@ var injectRatings = function(tomatoes){
             $('.MovieItemsRotator .item').each(function(i, el){
                 var title = $(el).find('.Title').text().replace(blacklistRegexp, '').trim();
                 var tomato = findTomato(title, tomatoes);
-                var classes = ["overlay"];
+                var classes = ["overlay", "overlay-poster"];
                 var templateData = tomato ? prepareData(tomato, classes) : { query: title, classes: namespaceClasses(classes) };
-                $(el).find('div').first().css('position','relative').prepend(Handlebars.templates.ratings(templateData));
+                $(el).prepend(Handlebars.templates.ratings(templateData));
             });
             //http://cineplex.com/Movies.aspx
             $('.Movies .Movie').each(function(i, el){

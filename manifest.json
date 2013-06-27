@@ -3,7 +3,7 @@
 
   "name": "Movie Buddy",
   "description": "Display movie ratings from Rotten Tomatoes to movie showtime listings.",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "content_scripts": [
       {
         "matches": [
